@@ -41,6 +41,7 @@ setup(
     url='https://github.com/tylerdave/click_tutorial',
     packages=['click_tutorial'],
     package_data={'click_tutorial': ['data/tutorial_lessons.json']},
+    # NOTE: SLIDE 1 - THIS ADDS THE COMMANDS TO THE COMMAND LINE (PER VIRTUAL ENV) - ALL OS'S
     entry_points={
         'console_scripts':[
             'pytn=click_tutorial.cli:cli',
