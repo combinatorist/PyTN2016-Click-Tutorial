@@ -12,5 +12,11 @@ def cli():
 def prompt1_ish(data):
     click.echo('data: ' + str(data))
 
+@cli.command(name='prompt2')
+@click.option('--data', prompt=True)
+def prompt2_ish(data):
+    click.echo('Custom prompt text: ' + str(data))
+
 if __name__ == '__main__':
     cli()
+
