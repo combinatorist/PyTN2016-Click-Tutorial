@@ -11,7 +11,9 @@ def cli(letter, number, clamped_number):
     Output a greeting to PyTennessee!
     """
 # for some reason this works when I comment out the 'letter' line    
-# it works if you specify letter, but if you only specificy number
+# it works if you specify letter, but not if you only specificy number
+# fixed - the issue was that the letter argument was read in as "None".
+# So, I had to convert to str before I could append it into the string.
     click.echo("letter: " + str(letter))
     click.echo("number: " + str(number))
     click.echo("clamped_number: " + str(clamped_number))
