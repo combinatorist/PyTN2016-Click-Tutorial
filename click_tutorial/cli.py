@@ -7,15 +7,15 @@ def cli():
     """
     pass
 
-@cli.command(name='prompt1')
+@cli.command()
 @click.option('--data', prompt=True)
-def prompt1_ish(data):
+def prompt1(data):
     click.echo('data: ' + str(data))
 
 @cli.command(name='prompt2')
-@click.option('--data', prompt=True)
+@click.option('--data', prompt="Custom prompt text")
 def prompt2_ish(data):
-    click.echo('Custom prompt text: ' + str(data))
+    click.echo('data: ' + str(data))
 
 if __name__ == '__main__':
     cli()
