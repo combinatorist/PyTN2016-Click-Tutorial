@@ -17,6 +17,10 @@ def prompt1(data):
 def prompt2_ish(data):
     click.echo('data: ' + str(data))
 
+@cli.command()
+@click.option('--data', prompt="Password", hide_input=True, confirmation_prompt=True)
+def prompt3(data):
+    click.echo('password: ' + data)
 if __name__ == '__main__':
     cli()
 
