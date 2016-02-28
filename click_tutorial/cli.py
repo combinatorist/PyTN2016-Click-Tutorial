@@ -1,11 +1,15 @@
 import click
 
-@click.command(name='pytn')
+@click.group(name='pytn')
 def cli():
     """
     Output a greeting to PyTennessee!
     """
-    click.echo("Hello, PyTN!")
+
+@cli.command(name="prompt1")
+def prompter1():
+    data = click.prompt("Data")
+    click.echo('data: ' + data)
 
 if __name__ == '__main__':
     cli()
